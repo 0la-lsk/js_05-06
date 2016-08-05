@@ -37,7 +37,7 @@ function Timer () {
 	//status = 1;
 	function counter() {
 		mseconds+=10;		
-		if ( mseconds > 1000 ) { ++seconds; mseconds = 0; }
+		if ( mseconds >= 1000 ) { ++seconds; mseconds = 0; }
 		if ( seconds >= LIMIT ) {++minutes; seconds = 0; }
 		if ( minutes >= LIMIT ) {++hours; minutes = 0; }
 		time_text = zero(hours) + ':' + zero(minutes) + ':' + zero(seconds) + '.' + zero(mseconds, 3);
